@@ -1,5 +1,6 @@
 from relationship_app.models import Author, Book, Library, Librarian
 
+
 def query_books_by_author(author_name):
     """Query all books by a specific author."""
     try:
@@ -8,6 +9,7 @@ def query_books_by_author(author_name):
         return books
     except Author.DoesNotExist:
         return []
+
 
 def list_books_in_library(library_name):
     """List all books in a specific library."""
@@ -18,6 +20,7 @@ def list_books_in_library(library_name):
     except Library.DoesNotExist:
         return []
 
+
 def retrieve_librarian_for_library(library_name):
     """Retrieve the librarian for a specific library."""
     try:
@@ -26,6 +29,7 @@ def retrieve_librarian_for_library(library_name):
         return librarian
     except (Library.DoesNotExist, Librarian.DoesNotExist):
         return None
+
 
 # Example usage (can be removed in production):
 if __name__ == "__main__":
