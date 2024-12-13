@@ -1,2 +1,4 @@
+# Delete book
 from bookshelf.models import Book
-book.delete() # Expected Output: Confirmation of deletion  
+book = Book.objects.get(title='Nineteen Eighty-Four')
+book.delete()

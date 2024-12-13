@@ -1,1 +1,1 @@
-"# LibraryProject - Django Project" 
+intro django
